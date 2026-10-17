@@ -16,14 +16,16 @@ class Car:
     tires: Tires
     pitted_this_lap: bool = False
     finished: bool = False 
-    lap: int = 0
+    lap: int = 1
     position: int = 1
     wear: int = 0 
     damage: int = 0
     tires_used: list = field(default_factory=list) #initalizs a list per object created once called
     hand: list = field(default_factory=list) #initalizs a list per object created once called 
 
-    
+    def __post_init__(self):
+        self.tires_used.append(self.tires)
+
 
     
 if __name__ == "__main__":
