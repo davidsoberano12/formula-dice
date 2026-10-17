@@ -1,6 +1,7 @@
 from enum import Enum
 
 
+
 class Tires(Enum):
 	SOFT = "soft"
 	MEDIUM = "medium"
